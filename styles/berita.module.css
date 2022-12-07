@@ -1,0 +1,27 @@
+.bg {
+	background: #398AB9;
+	color: white;
+}
+
+.tips {
+	background: linear-gradient(310.88deg, #FF3A3A 34.32%, rgba(196, 196, 196, 0) 115.74%);
+	filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
+	border-radius: 5px;
+}
+
+.news {
+	background: linear-gradient(310.88deg, #09BCB1 34.32%, rgba(196, 196, 196, 0) 115.74%);
+	filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
+	border-radius: 5px;
+}
+
+.pedia {
+	background: linear-gradient(310.88deg, #FF7628 34.32%, rgba(196, 196, 196, 0) 115.74%);
+	filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
+	border-radius: 5px;
+}
+
+.gambarTips{
+	width: 148px;
+	height: 92px;
+}

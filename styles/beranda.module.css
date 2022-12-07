@@ -1,0 +1,39 @@
+.formJualBeli {
+  box-shadow: 0 0 8px 2px #888;
+  background: white;
+  margin-top: 33%;
+}
+
+.heroes {
+  position: absolute;
+  z-index: -1;
+}
+
+.merek:hover {
+  background: #398AB9;
+  cursor: pointer;
+}
+
+.caraKerja{
+	background: #1C658C;
+}
+
+.caraKerjaText{
+	color: white;
+}
+
+.caraKerjaIcon{
+	width: 130px;
+	height: 130px;
+}
+
+.circleBackgorund {
+	border-radius: 50%;
+    width: 150px;
+    height: 150px; 
+    background: #EEEEEE;
+}
+
+.lihatBanyakMobil:hover {
+  cursor: pointer;
+}
