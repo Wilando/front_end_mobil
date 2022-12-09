@@ -59,3 +59,7 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
 .bgContent{
   background: #EEEEEE;
 }
+
+.dummyContainer {
+  height: 100vh;
+}

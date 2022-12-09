@@ -44,7 +44,7 @@ export default function DetailBerita() {
               <input type="text" className="form-control" id="nama"/>
             </div>
             <div className="input-group mb-3">
-              <label className="input-group-text" htmlFor="transaksi">Jenis Transaksi</label>
+              <span className="input-group-text" htmlFor="transaksi">Jenis Transaksi</span>
               <select className="form-select" id="transaksi">
                 <option>Pilih</option>
                 <option value="1">One</option>
@@ -81,7 +81,7 @@ export default function DetailBerita() {
               <input type="text" className="form-control" id="nama"/>
             </div>
             <div className="input-group mb-3">
-              <label className="input-group-text" htmlFor="ukuran_mobil">Ukuran Mobil</label>
+              <span className="input-group-text" htmlFor="ukuran_mobil">Ukuran Mobil</span>
               <select className="form-select" id="ukuran_mobil">
                 <option>Pilih</option>
                 <option value="1">One</option>
@@ -90,15 +90,15 @@ export default function DetailBerita() {
               </select>
             </div>
             <div className="input-group mb-3">
-              <label className="input-group-text" htmlFor="hari">Hari</label>
+              <span className="input-group-text" htmlFor="hari">Hari</span>
               <select className="form-select" id="hari">
                 <option>Pilih</option>
                 <option value="1">One</option>
                 <option value="2">Two</option>
                 <option value="3">Three</option>
               </select>
-              <div className="form-text">Hari yang anfa pilih sebagai referensi penjadwalan sesuai antrian.</div>
             </div>
+            <div className="form-text">Hari yang anfa pilih sebagai referensi penjadwalan sesuai antrian.</div>
             <div className="d-grid col-12 mx-auto">
               <button className="btn btn-primary" type="button">Submit</button>
             </div>

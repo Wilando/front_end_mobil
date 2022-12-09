@@ -15,6 +15,21 @@ import bg from '../public/images/bg_home.png';
 export default function Home() {
   const router = useRouter();
   const [cari, setCari] = useState("");
+  const [caraBeli, setCaraBeli] = useState(true);
+  const [caraJual, setCaraJual] = useState(false);
+
+  const toggleCaraBeli = () => {
+    if(!caraBeli){
+      setCaraBeli(!caraBeli);
+      setCaraJual(!caraJual);
+    }
+  };
+  const toggleCaraJual = () => {
+    if(!caraJual){
+      setCaraBeli(!caraBeli);
+      setCaraJual(!caraJual);
+    }
+  };
 
   const merk = (merkMobil) =>{
     router.push(`/daftar_mobil?cari=${merkMobil}`)
@@ -43,7 +58,7 @@ export default function Home() {
                placeholder="Cari mobil berdasarkan Merek, Tahun, Plat."
                onChange={(event)=>{setCari(event.target.value)}}
               />
-              <button type="button" className="btn btn-primary btn-lg px-4 mx-4" onClick={()=>{router.push(`/daftar_mobil?cari=${cari}`)}}>
+              <button type="button" className={`${style.btnBeranda} btn btn-lg px-4 mx-4`} onClick={()=>{router.push(`/daftar_mobil?cari=${cari}`)}}>
                 Cari
               </button>
             </div>
@@ -122,7 +137,7 @@ export default function Home() {
               <input type="number" className="form-control" id="noTelp"/>
             </div>
             <div className="d-grid">
-              <button className="btn btn-primary" type="button">Submit</button>
+              <button className={`${style.btnBeranda} btn`} type="button">Submit</button>
               <p>Kami akan segera menghubungi Anda melalui nomor handphone yang dimasukan.</p>
             </div>
 
@@ -187,7 +202,7 @@ export default function Home() {
             <div className={`card text-bg-primary mb-3 h-100 ${style.lihatBanyakMobil}`}
               onClick ={()=>{router.push("/daftar_mobil")}}
             >
-              <div className="card-body d-flex align-items-center">
+              <div className={`${style.lihatLebihBanyak} card-body d-flex align-items-center`}>
                 <h5 className="card-text">Lihat lebih banyak mobil</h5>
               </div>
             </div>
@@ -199,63 +214,120 @@ export default function Home() {
         <h3 className={`${style.caraKerjaText} text-center`}>CARA KERJA</h3>
         
         <div className="d-grid gap-5 d-md-flex justify-content-center mt-4 mb-5">
-          <button className="btn btn-primary" type="button">CARA MEMBELI</button>
-          <button className="btn btn-primary" type="button">CARA MENJUAL</button>
+          <button className={`${caraBeli ? style.btnCaraKerjaActive : style.btnCaraKerja} btn`} type="button" onClick={toggleCaraBeli} >CARA MEMBELI</button>
+          <button className={`${caraBeli ? style.btnCaraKerja : style.btnCaraKerjaActive } btn`} type="button" onClick={toggleCaraJual} >CARA MENJUAL</button>
         </div>
 
         <div className="container">
-        <div className="row row-cols-1 row-cols-md-4 g-4">
-          <div className="col">
-            <div className="card h-100">
-              <img src="/icons/temukanMobil.svg" className={`${style.caraKerjaIcon} card-img-top ms-2`} alt="gambar"/>
-              <div className="card-body">
-                <h5 className="card-title">Temukan Mobil Anda</h5>
-                <p className="card-text">
-                  Lorem Ipsum has been the 
-                  industry's standard dummy 
-                  text ever since the 1500s
-                </p>
+          <div className={`${caraBeli ? null : "d-none"} row row-cols-1 row-cols-md-4 g-4`}>
+            <div className="col">
+              <div className="card h-100">
+
+                <div className={`${style.caraKerjaIcon} p-4 rounded-circle d-flex justify-content-center m-3 ${style.circle}`}>
+                  <img src="/icons/temukanMobil.svg" className={`card-img-top`} alt="gambar"/>
+                </div>
+                <div className="card-body">
+                  <h5 className="card-title">Temukan Mobil Anda</h5>
+                  <p className="card-text">
+                    Lorem Ipsum has been the 
+                    industry's standard dummy 
+                    text ever since the 1500s
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col">
+              <div className="card h-100">
+                <div className={`${style.caraKerjaIcon} p-4 rounded-circle d-flex justify-content-center m-3 ${style.circle}`}>
+                 <img src="/icons/transaksi.svg" className={`card-img-top`} alt="gambar"/>
+                </div>
+                <div className="card-body">
+                  <h5 className="card-title">Transaksi Pembayaran</h5>
+                  <p className="card-text">
+                    Lorem Ipsum has been the 
+                    industry's standard dummy 
+                    text ever since the 1500s
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col">
+              <div className="card h-100">
+                <div className={`${style.caraKerjaIcon} p-4 rounded-circle d-flex justify-content-center m-3 ${style.circle}`}>
+                  <img src="/icons/kirim.svg" className={`card-img-top`} alt="gambar"/>
+                </div>
+                <div className="card-body">
+                  <h5 className="card-title">Pengiriman Langung Ke Rumah Anda</h5>
+                  <p className="card-text">
+                    Lorem Ipsum has been the 
+                    industry's standard dummy 
+                    text ever since the 1500s
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col">
+              <div className="card h-100">
+                {/*<div className={`${style.circleBackgorund}`}>*/}
+                  <div className={`${style.caraKerjaIcon} p-4 rounded-circle d-flex justify-content-center m-3 ${style.circle}`}>
+                   <img src="/icons/uangKembali.svg" className={`card-img-top`} alt="gambar"/>
+                  </div>
+                {/*</div>*/}
+                <div className="card-body">
+                  <h5 className="card-title">Jaminan Uang Kembali</h5>
+                  <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
               </div>
             </div>
           </div>
-          <div className="col">
-            <div className="card h-100">
-              <img src="/icons/transaksi.svg" className={`${style.caraKerjaIcon} card-img-top ms-2`} alt="gambar"/>
-              <div className="card-body">
-                <h5 className="card-title">Transaksi Pembayaran</h5>
-                <p className="card-text">
-                  Lorem Ipsum has been the 
-                  industry's standard dummy 
-                  text ever since the 1500s
-                </p>
+          <div className={`${caraBeli ? "d-none" : null } row row-cols-1 row-cols-md-4 g-4 justify-content-center`}>
+            <div className="col">
+              <div className="card h-100">
+
+                <div className={`${style.caraKerjaIcon} p-4 rounded-circle d-flex justify-content-center m-3 ${style.circle}`}>
+                  <img src="/icons/jadwal.svg" className={`card-img-top`} alt="gambar"/>
+                </div>
+                <div className="card-body">
+                  <h5 className="card-title">Buat Jadwal</h5>
+                  <p className="card-text">
+                    Lorem Ipsum has been the 
+                    industry's standard dummy 
+                    text ever since the 1500s
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col">
+              <div className="card h-100">
+                <div className={`${style.caraKerjaIcon} p-4 rounded-circle d-flex justify-content-center m-3 ${style.circle}`}>
+                 <img src="/icons/inspeksi.svg" className={`card-img-top`} alt="gambar"/>
+                </div>
+                <div className="card-body">
+                  <h5 className="card-title">Inspeksi Kendaraan Anda</h5>
+                  <p className="card-text">
+                    Lorem Ipsum has been the 
+                    industry's standard dummy 
+                    text ever since the 1500s
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col">
+              <div className="card h-100">
+                <div className={`${style.caraKerjaIcon} p-4 rounded-circle d-flex justify-content-center m-3 ${style.circle}`}>
+                  <img src="/icons/penjualan.svg" className={`card-img-top`} alt="gambar"/>
+                </div>
+                <div className="card-body">
+                  <h5 className="card-title">Konfirmasi Penjualan</h5>
+                  <p className="card-text">
+                    Lorem Ipsum has been the 
+                    industry's standard dummy 
+                    text ever since the 1500s
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-          <div className="col">
-            <div className="card h-100">
-              <img src="/icons/kirim.svg" className={`${style.caraKerjaIcon} card-img-top ms-2`} alt="gambar"/>
-              <div className="card-body">
-                <h5 className="card-title">Pengiriman Langung Ke Rumah Anda</h5>
-                <p className="card-text">
-                  Lorem Ipsum has been the 
-                  industry's standard dummy 
-                  text ever since the 1500s
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="col">
-            <div className="card h-100">
-              {/*<div className={`${style.circleBackgorund}`}>*/}
-                <img src="/icons/uangKembali.svg" className={`${style.caraKerjaIcon} card-img-top ms-2`} alt="gambar"/>
-              {/*</div>*/}
-              <div className="card-body">
-                <h5 className="card-title">Jaminan Uang Kembali</h5>
-                <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              </div>
-            </div>
-          </div>
-        </div>
         </div>
       </div>
 
@@ -305,10 +377,18 @@ export default function Home() {
             <button type="button" className="list-group-item list-group-item-action active">
               Pertanyaan Umum
             </button>
-            <button type="button" className="list-group-item list-group-item-action">Beli Mobil</button>
-            <button type="button" className="list-group-item list-group-item-action">Jual Mobil</button>
-            <button type="button" className="list-group-item list-group-item-action">Kredit</button>
-            <button type="button" className="list-group-item list-group-item-action">Tukar Tambah</button>
+            <button type="button" className="list-group-item list-group-item-action" onClick={()=>{router.push("/transaksi")}}>
+              Beli Mobil
+            </button>
+            <button type="button" className="list-group-item list-group-item-action" onClick={()=>{router.push("/transaksi")}}>
+              Jual Mobil
+            </button>
+            <button type="button" className="list-group-item list-group-item-action" onClick={()=>{router.push("/transaksi")}}>
+              Kredit
+            </button>
+            <button type="button" className="list-group-item list-group-item-action" onClick={()=>{router.push("/transaksi")}}>
+              Tukar Tambah
+            </button>
           </div>
           <div>
             <h5>Pertanyaan Umum</h5>

@@ -37,3 +37,46 @@
 .lihatBanyakMobil:hover {
   cursor: pointer;
 }
+
+.btnBeranda{
+  background: #1C658C;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  color: #FFFFFF;
+}
+
+.btnBeranda:hover{
+  color: black;
+}
+
+.btnCaraKerja {
+  background: #398AB9;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  color: #FFFFFF;
+}
+.btnCaraKerja:hover{
+  background: #FFFFFF;
+  color: black;
+}
+
+.btnCaraKerjaActive {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  color: black;
+}
+
+.btnCaraKerjaActive:hover{
+  background: #FFFFFF;
+  color: black;
+}
+
+
+.circle {
+  background: #EEEEEE;
+}
+
+.lihatLebihBanyak{
+  background: #1C658C;
+}
