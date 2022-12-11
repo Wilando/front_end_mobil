@@ -14,10 +14,10 @@ export default function Footer() {
     <div className={`${style.backgroundFooter} container-fluid`}>
       <div className="d-flex justify-content-center py-3 border-bottom">
         <p className="text-center me-3">Social Media:</p>
-        <Image className="mx-1" src={wa} alt="wa" />
-        <Image className="mx-1" src={ig} alt="ig" />
-        <Image className="mx-1" src={fb} alt="fb" />
-        <Image className="mx-1" src={yt} alt="yt" />
+        <a href="https://www.whatsapp.com/"><Image className="mx-1" src={wa} alt="wa" /></a>
+        <a href="https://www.instagram.com/"><Image className="mx-1" src={ig} alt="ig" /></a>
+        <a href="https://www.facebook.com/"><Image className="mx-1" src={fb} alt="fb" /></a>
+        <a href="https://www.youtube.com/"><Image className="mx-1" src={yt} alt="yt" /></a>
       </div>
       <footer className="row row-cols-1 row-cols-sm-2 row-cols-md-5 justify-content-center mt-4">
 
