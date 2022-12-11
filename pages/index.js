@@ -13,6 +13,7 @@ import style from "../styles/beranda.module.css";
 import bg from '../public/images/bg_home.png';
 
 export default function Home() {
+  
   const router = useRouter();
   const [cari, setCari] = useState("");
   const [caraBeli, setCaraBeli] = useState(true);
@@ -50,8 +51,8 @@ export default function Home() {
       <Navbar />
       <img src="/images/bg_home.png" className={`img-fluid d-none d-md-block ${style.heroes}`} alt="gambar"/>
       <div className="container mb-5">
-        <div className={`${style.formJualBeli} row p-3`}>
-          <div className="col-8">
+        <div className={`${style.formJualBeli} row p-3 g-4`}>
+          <div className="col-12 col-md-8">
             <h3>Beli Mobil</h3>
             <div className="d-flex justify-content-between mt-4">
               <input className="form-control form-control-lg" type="text"
@@ -62,7 +63,7 @@ export default function Home() {
                 Cari
               </button>
             </div>
-            <div className="row row-cols-4 overflow-auto text-center mt-4 gy-3">
+            <div className="row overflow-auto text-center mt-4 gy-3">
               <div className="col" onClick={()=>{merk("Honda")}}>
                 <div className={`${style.merek} p-4 border`}>
                   <Image src="/images/honda.png" alt="merk" width={88} height={65}/>
@@ -114,7 +115,7 @@ export default function Home() {
 
             </div>
           </div>
-          <div className="col-4 border-start">
+          <div className="col-12 col-md-4 border-start">
             <h3>Jual Mobil</h3>
             <select className="form-select my-4">
               <option defaultValue>Pilih Merk</option>
@@ -152,12 +153,12 @@ export default function Home() {
         <div className="row row-cols-1 row-cols-md-4 g-4">
           <div className="col">
             <div className="card h-100">
-              <img src="images/mobil.png" className="card-img-top" alt="Mobil"/>
+              <img src="Mobil/serena-1.jpg" className="card-img-top" alt="Mobil"/>
               <div className="card-body">
-                <h5 className="card-title">DAIHATSU XENIA R MT</h5>
+                <h5 className="card-title">Serena</h5>
                 <p className="card-text">2018 | MANUAL TRANSMISSION | 1300 CC | KM 130.00</p>
                 <p><strong>Rp. 132.000.000</strong></p>
-                <button type="button" className="btn btn-outline-primary" onClick={()=>{detail("DAIHATSU XENIA R MT")}}>
+                <button type="button" className="btn btn-outline-primary" onClick={()=>{detail("serena")}}>
                   Selengkapnya
                 </button>
               </div>
@@ -168,12 +169,12 @@ export default function Home() {
           </div>
           <div className="col">
             <div className="card h-100">
-              <img src="images/mobil.png" className="card-img-top" alt="Mobil"/>
+              <img src="Mobil/terios-1.jpg" className="card-img-top" alt="Mobil"/>
               <div className="card-body">
-                <h5 className="card-title">DAIHATSU XENIA R MT</h5>
+                <h5 className="card-title">Terios</h5>
                 <p className="card-text">2018 | MANUAL TRANSMISSION | 1300 CC | KM 130.00</p>
                 <p><strong>Rp. 132.000.000</strong></p>
-                <button type="button" className="btn btn-outline-primary" onClick={()=>{detail("DAIHATSU XENIA R MT")}}>
+                <button type="button" className="btn btn-outline-primary" onClick={()=>{detail("terios")}}>
                   Selengkapnya
                 </button>
               </div>
@@ -184,12 +185,12 @@ export default function Home() {
           </div>
           <div className="col">
             <div className="card h-100">
-              <img src="images/mobil.png" className="card-img-top" alt="Mobil"/>
+              <img src="Mobil/trailblazer-1.jpg" className="card-img-top" alt="Mobil"/>
               <div className="card-body">
-                <h5 className="card-title">DAIHATSU XENIA R MT</h5>
+                <h5 className="card-title">Trailblazer</h5>
                 <p className="card-text">2018 | MANUAL TRANSMISSION | 1300 CC | KM 130.00</p>
                 <p><strong>Rp. 132.000.000</strong></p>
-                <button type="button" className="btn btn-outline-primary" onClick={()=>{detail("DAIHATSU XENIA R MT")}}>
+                <button type="button" className="btn btn-outline-primary" onClick={()=>{detail("trailblazer")}}>
                   Selengkapnya
                 </button>
               </div>
@@ -372,8 +373,8 @@ export default function Home() {
       <h3 className={`text-center my-5`}>FAQ</h3>
 
       <div className="container">
-        <div className="d-flex flex-row justify-content-evenly mb-3">
-          <div className="list-group w-100 mx-5">
+        <div className="d-flex flex-column flex-md-row justify-content-evenly mb-3">
+          <div className="list-group w-75 w-sm-100 mx-5 mb-3">
             <button type="button" className="list-group-item list-group-item-action active">
               Pertanyaan Umum
             </button>

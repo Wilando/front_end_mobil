@@ -82,7 +82,7 @@ export default function DetailMobil() {
           <div className="row mb-3">
             <label htmlFor="gambar" className="col-sm-2 col-form-label">Foto</label>
             <div className="col-sm-10">
-              <img src="/images/mobil.png" alt="mobil" />
+              <input type="file" className="form-control" id="gambar" multiple/>
             </div>
           </div>
           <div className="d-grid gap-2 d-md-block text-end">

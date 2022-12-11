@@ -81,8 +81,10 @@ export default function DetailMobil() {
           </div>
           <div className="row mb-3">
             <label htmlFor="gambar" className="col-sm-2 col-form-label">Foto</label>
-            <div className="col-sm-10">
-              <img src="/images/mobil.png" alt="mobil" />
+            <div className="col-sm-6">
+              <img className="img-fluid" src={`/Mobil/${mobil}-1.jpg`} alt="mobil" />
+              <img className="img-fluid" src={`/Mobil/${mobil}-2.jpg`} alt="mobil" />
+              <img className="img-fluid" src={`/Mobil/${mobil}-3.jpg`} alt="mobil" />
             </div>
           </div>
         </div>

@@ -55,7 +55,7 @@ export default function KelolaStockMobil() {
         </div>
 
         <h6 className="ms-3">Daftar Berita Website BDL Mobilindo</h6>
-        <div className="d-flex">
+        <div className="d-flex table-responsive">
         <table className="table table-bordered mx-4">
           <thead className={`${style.headTableColor}`}>
             <tr className="text-white">

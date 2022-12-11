@@ -30,7 +30,7 @@ export default function Dashboard() {
     <NavbarAndSidebar>
     { role === "superAdmin" &&
       <div className="row row-cols-2 m-auto g-5 justify-content-center">
-        <div className="col-5">
+        <div className="col-12 col-md-5">
           <div className={`${style.cardDashboard} d-flex align-items-center p-3`}>
             <div className="flex-grow-1">
               <p className="display-6">2</p>
@@ -41,7 +41,7 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
-        <div className="col-5">
+        <div className="col-12 col-md-5">
           <div className={`${style.cardDashboard} d-flex align-items-center p-3`}>
             <div className="flex-grow-1">
               <p className="display-6">9</p>
@@ -52,7 +52,7 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
-        <div className="col-5">
+        <div className="col-12 col-md-5">
           <div className={`${style.cardDashboard} d-flex align-items-center p-3`}>
             <div className="flex-grow-1">
               <p className="display-6">12</p>
@@ -63,7 +63,7 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
-        <div className="col-5">
+        <div className="col-12 col-md-5">
           <div className={`${style.cardDashboard} d-flex align-items-center p-3`}>
             <div className="flex-grow-1">
               <p className="display-6">41</p>
@@ -78,7 +78,7 @@ export default function Dashboard() {
     }
     { role === "inspector" &&
       <div className="row row-cols-2 m-auto g-5 justify-content-center">
-        <div className="col-5">
+        <div className="col-12 col-md-5">
           <div className={`${style.cardDashboard} d-flex align-items-center p-3`}>
             <div className="flex-grow-1">
               <p className="display-6">2</p>
@@ -89,7 +89,7 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
-        <div className="col-5">
+        <div className="col-12 col-md-5">
           <div className={`${style.cardDashboard} d-flex align-items-center p-3`}>
             <div className="flex-grow-1">
               <p className="display-6">9</p>
@@ -104,7 +104,7 @@ export default function Dashboard() {
     }
     { role === "admin" &&
       <div className="row row-cols-2 m-auto g-5 justify-content-center">
-        <div className="col-5">
+        <div className="col-12 col-md-5">
           <div className={`${style.cardDashboard} d-flex align-items-center p-3`}>
             <div className="flex-grow-1">
               <p className="display-6">7</p>
@@ -115,7 +115,7 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
-        <div className="col-5">
+        <div className="col-12 col-md-5">
           <div className={`${style.cardDashboard} d-flex align-items-center p-3`}>
             <div className="flex-grow-1">
               <p className="display-6">20</p>
@@ -126,7 +126,7 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
-        <div className="col-5">
+        <div className="col-12 col-md-5">
           <div className={`${style.cardDashboard} d-flex align-items-center p-3`}>
             <div className="flex-grow-1">
               <p className="display-6">8</p>
@@ -137,7 +137,7 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
-        <div className="col-5">
+        <div className="col-12 col-md-5">
           <div className={`${style.cardDashboard} d-flex align-items-center p-3`}>
             <div className="flex-grow-1">
               <p className="display-6">4</p>
@@ -148,7 +148,7 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
-        <div className="col-5">
+        <div className="col-12 col-md-5">
           <div className={`${style.cardDashboard} d-flex align-items-center p-3`}>
             <div className="flex-grow-1">
               <p className="display-6">12</p>

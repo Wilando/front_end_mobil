@@ -46,9 +46,9 @@ export default function DetailAkun() {
         </div>
 
         <h6 className="ms-3">Halaman Riwayat Transaksi</h6>
-        <div className="d-flex flex-row mb-3 mx-5 mt-5">
-          <img src="/images/mobilDetail.png" />
-          <div className="d-flex flex-column ms-5">
+        <div className="d-flex flex-column flex-md-row mb-3 mx-5 mt-5">
+          <img className="img-fluid w-75" src={`/Mobil/${mobil}-1.jpg`} alt="images" />
+          <div className="d-flex flex-column ms-md-5">
             <div><h1>{mobil}</h1></div>
             <div><h5>{harga}</h5></div>
             <div className="mt-4">Pembayaran Transfer</div>

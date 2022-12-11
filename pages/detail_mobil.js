@@ -49,9 +49,9 @@ export default function DetailMobil() {
     </div>
 
     <div className="container">
-      <div className="d-flex flex-row mb-3 mt-5">
-        <img className="img-fluid" src="/images/mobilDetail.png" alt="merk" />
-        <div className="ms-5">
+      <div className="d-flex flex-column flex-md-row mb-3 mt-5">
+        <img className="img-fluid" src={`/Mobil/${cari}-1.jpg`} alt="merk" />
+        <div className="ms-md-5">
           <h1>{cari}</h1>
           <h4>Rp. 132.000.000</h4>
           <div className="d-flex flex-row mb-5">
@@ -87,12 +87,12 @@ export default function DetailMobil() {
     <div className="row row-cols-1 row-cols-md-3 g-4">
         <div className="col">
           <div className="card h-100">
-            <img src="images/mobil.png" className="card-img-top" alt="Mobil"/>
+            <img src="Mobil/trailblazer-1.jpg" className="card-img-top" alt="Mobil"/>
             <div className="card-body">
-              <h5 className="card-title">{cari != undefined ? cari : "TOYOTA 2019"}</h5>
+              <h5 className="card-title">Trailblazer</h5>
               <p className="card-text">2018 | MANUAL TRANSMISSION | 1300 CC | KM 130.00</p>
               <p><strong>Rp. 132.000.000</strong></p>
-              <button type="button" className="btn btn-outline-primary" onClick={()=>{detail(cari)}}>
+              <button type="button" className="btn btn-outline-primary" onClick={()=>{detail("trailblazer")}}>
                 Selengkapnya
               </button>
             </div>
@@ -100,12 +100,12 @@ export default function DetailMobil() {
         </div>
         <div className="col">
           <div className="card h-100">
-            <img src="images/mobil.png" className="card-img-top" alt="Mobil"/>
+            <img src="Mobil/terios-1.jpg" className="card-img-top" alt="Mobil"/>
             <div className="card-body">
-              <h5 className="card-title">{cari != undefined ? cari : "TOYOTA 2019"}</h5>
+              <h5 className="card-title">Terios</h5>
               <p className="card-text">2018 | MANUAL TRANSMISSION | 1300 CC | KM 130.00</p>
               <p><strong>Rp. 132.000.000</strong></p>
-              <button type="button" className="btn btn-outline-primary" onClick={()=>{detail(cari)}}>
+              <button type="button" className="btn btn-outline-primary" onClick={()=>{detail("terios")}}>
                 Selengkapnya
               </button>
             </div>
@@ -113,12 +113,12 @@ export default function DetailMobil() {
         </div>
         <div className="col">
           <div className="card h-100">
-            <img src="images/mobil.png" className="card-img-top" alt="Mobil"/>
+            <img src="Mobil/serena-1.jpg" className="card-img-top" alt="Mobil"/>
             <div className="card-body">
-              <h5 className="card-title">{cari != undefined ? cari : "TOYOTA 2019"}</h5>
+              <h5 className="card-title">Serena</h5>
               <p className="card-text">2018 | MANUAL TRANSMISSION | 1300 CC | KM 130.00</p>
               <p><strong>Rp. 132.000.000</strong></p>
-              <button type="button" className="btn btn-outline-primary" onClick={()=>{detail(cari)}}>
+              <button type="button" className="btn btn-outline-primary" onClick={()=>{detail("serena")}}>
                 Selengkapnya
               </button>
             </div>

@@ -27,9 +27,9 @@ export default function Promo() {
 
     <div className="container mb-5">
       <h4 className="text-center my-5">PROMO HARI INI</h4>
-      <div className="row row-cols-3 mt-4">
+      <div className="row row-cols-1 row-cols-md-3 mt-4">
         <div className="col mb-3">
-          <img className={style.gambarListPromo} src="/images/promoList.png" alt="image"/>
+          <img className={`${style.gambarListPromo}`} src="/images/promoList.png" alt="image"/>
           <h6 className="mt-3">Lorem Ipsum is simply dummy text of the printing and ...</h6>
           <p>
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
@@ -38,7 +38,7 @@ export default function Promo() {
           <Link href="/detail_promo">Selengkapnya</Link>
         </div>
         <div className="col mb-3">
-          <img className={style.gambarListPromo} src="/images/promoList.png" alt="image"/>
+          <img className={`${style.gambarListPromo}`} src="/images/promoList.png" alt="image"/>
           <h6 className="mt-3">Lorem Ipsum is simply dummy text of the printing and ...</h6>
           <p>
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
@@ -47,7 +47,7 @@ export default function Promo() {
           <Link href="/detail_promo">Selengkapnya</Link>
         </div>
         <div className="col mb-3">
-          <img className={style.gambarListPromo} src="/images/promoList.png" alt="image"/>
+          <img className={`${style.gambarListPromo}`} src="/images/promoList.png" alt="image"/>
           <h6 className="mt-3">Lorem Ipsum is simply dummy text of the printing and ...</h6>
           <p>
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
@@ -56,7 +56,7 @@ export default function Promo() {
           <Link href="/detail_promo">Selengkapnya</Link>
         </div>
         <div className="col mb-3">
-          <img className={style.gambarListPromo} src="/images/promoList.png" alt="image"/>
+          <img className={`${style.gambarListPromo}`} src="/images/promoList.png" alt="image"/>
           <h6 className="mt-3">Lorem Ipsum is simply dummy text of the printing and ...</h6>
           <p>
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
@@ -65,7 +65,7 @@ export default function Promo() {
           <Link href="/detail_promo">Selengkapnya</Link>
         </div>
         <div className="col mb-3">
-          <img className={style.gambarListPromo} src="/images/promoList.png" alt="image"/>
+          <img className={`${style.gambarListPromo}`} src="/images/promoList.png" alt="image"/>
           <h6 className="mt-3">Lorem Ipsum is simply dummy text of the printing and ...</h6>
           <p>
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
@@ -74,7 +74,7 @@ export default function Promo() {
           <Link href="/detail_promo">Selengkapnya</Link>
         </div>
         <div className="col mb-3">
-          <img className={style.gambarListPromo} src="/images/promoList.png" alt="image"/>
+          <img className={`${style.gambarListPromo}`} src="/images/promoList.png" alt="image"/>
           <h6 className="mt-3">Lorem Ipsum is simply dummy text of the printing and ...</h6>
           <p>
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer 

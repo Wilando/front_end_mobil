@@ -30,9 +30,9 @@ export default function DetailBerita() {
       <div className="row row-cols-1 row-cols-md-3 g-4">
         <div className="col">
           <div className="card h-100">
-            <img src="images/mobil.png" className="card-img-top" alt="Mobil"/>
+            <img src="Mobil/terios-1.jpg" className="card-img-top" alt="Mobil"/>
             <div className="card-body">
-              <h5 className="card-title">TOYOTA 2019</h5>
+              <h5 className="card-title">Terios</h5>
               <p className="card-text">2018 | MANUAL TRANSMISSION | 1300 CC | KM 130.00</p>
               <p><strong>Rp. 132.000.000</strong></p>
               <button type="button" className="btn btn-danger" disabled>
@@ -43,9 +43,9 @@ export default function DetailBerita() {
         </div>
         <div className="col">
           <div className="card h-100">
-            <img src="images/mobil.png" className="card-img-top" alt="Mobil"/>
+            <img src="Mobil/serena-1.jpg" className="card-img-top" alt="Mobil"/>
             <div className="card-body">
-              <h5 className="card-title">TOYOTA 2019</h5>
+              <h5 className="card-title">Serena</h5>
               <p className="card-text">2018 | MANUAL TRANSMISSION | 1300 CC | KM 130.00</p>
               <p><strong>Rp. 132.000.000</strong></p>
               <button type="button" className="btn btn-danger" disabled>
@@ -56,7 +56,7 @@ export default function DetailBerita() {
         </div>
         <div className="col">
           <div className="card h-100">
-            <img src="images/mobil.png" className="card-img-top" alt="Mobil"/>
+            <img src="Mobil/staria-1.jpg" className="card-img-top" alt="Mobil"/>
             <div className="card-body">
               <h5 className="card-title">TOYOTA 2019</h5>
               <p className="card-text">2018 | MANUAL TRANSMISSION | 1300 CC | KM 130.00</p>
@@ -72,9 +72,9 @@ export default function DetailBerita() {
       <div className="row row-cols-1 row-cols-md-3 g-4">
         <div className="col">
           <div className="card h-100">
-            <img src="images/mobil.png" className="card-img-top" alt="Mobil"/>
+            <img src="Mobil/tucson-1.jpg" className="card-img-top" alt="Mobil"/>
             <div className="card-body">
-              <h5 className="card-title">TOYOTA 2019</h5>
+              <h5 className="card-title">Tucson</h5>
               <p className="card-text">2018 | MANUAL TRANSMISSION | 1300 CC | KM 130.00</p>
               <p><strong>Rp. 132.000.000</strong></p>
               <button type="button" className="btn btn-danger" disabled>
@@ -85,9 +85,9 @@ export default function DetailBerita() {
         </div>
         <div className="col">
           <div className="card h-100">
-            <img src="images/mobil.png" className="card-img-top" alt="Mobil"/>
+            <img src="Mobil/trax-1.jpg" className="card-img-top" alt="Mobil"/>
             <div className="card-body">
-              <h5 className="card-title">TOYOTA 2019</h5>
+              <h5 className="card-title">Trax</h5>
               <p className="card-text">2018 | MANUAL TRANSMISSION | 1300 CC | KM 130.00</p>
               <p><strong>Rp. 132.000.000</strong></p>
               <button type="button" className="btn btn-danger" disabled>
@@ -98,9 +98,9 @@ export default function DetailBerita() {
         </div>
         <div className="col">
           <div className="card h-100">
-            <img src="images/mobil.png" className="card-img-top" alt="Mobil"/>
+            <img src="Mobil/livina-1.jpg" className="card-img-top" alt="Mobil"/>
             <div className="card-body">
-              <h5 className="card-title">TOYOTA 2019</h5>
+              <h5 className="card-title">Livina</h5>
               <p className="card-text">2018 | MANUAL TRANSMISSION | 1300 CC | KM 130.00</p>
               <p><strong>Rp. 132.000.000</strong></p>
               <button type="button" className="btn btn-danger" disabled>

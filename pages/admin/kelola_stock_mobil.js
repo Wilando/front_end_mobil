@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -8,9 +8,13 @@ import { useRouter } from 'next/router';
 import NavbarAndSidebar from "../../components/admin/NavbarAndSidebar.js";
 // Css
 import style from "../../styles/kelolaAkun.module.css";
+//Data
+import {listMobil} from '../../mobil';
 
 export default function KelolaStockMobil() {
 	const router = useRouter();
+
+  const [mobil, setMobil] = useState(listMobil);
 
   const detail = (mobil, harga) => {
     router.push(`/admin/detail_stock_mobil?mobil=${mobil}&harga=${harga}`);
@@ -59,7 +63,7 @@ export default function KelolaStockMobil() {
         </div>
 
         <h6 className="ms-3">Daftar Stok Mobil Showroom</h6>
-        <div className="d-flex">
+        <div className="d-flex table-responsive">
         <table className="table table-bordered mx-4">
           <thead className={`${style.headTableColor}`}>
             <tr className="text-white">
@@ -72,93 +76,39 @@ export default function KelolaStockMobil() {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Avanza</td>
-              <td>Rp.121.000.000</td>
-              <td>Pajak On, Mesin Record Dealer, mesin Terawat Halus Seperti Baru, Body Kinclong Tnpa Dempul, Interior Nyaman, Siap Pakai.</td>
-              <td>Tersedia</td>
-              <td>
-                <div className="d-flex text-center">
-                  <button className="btn btn-primary" type="button" 
-                    onClick={()=>{detailMobil("Avanza" ,"Rp.121.000.000")}}
-                  >
-                    <img src="/icons/eye.svg" />
-                  </button>
-                  <button type="button" className="btn btn-secondary ms-2"
-                    onClick={()=>{detail("Avanza" ,"Rp.121.000.000")}}
-                  >
-                    <img src="/icons/detail_transaksi.svg" />
-                  </button>
-                  <button className="btn btn-success mx-2" type="button"
-                    onClick={()=>{editMobil("Avanza" ,"Rp.121.000.000")}}
-                  >
-                    <img src="/icons/pena.svg" />
-                  </button>
-                  <button className="btn btn-danger" type="button">
-                    <img src="/icons/trash.svg" />
-                  </button>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Innova Ribbon</td>
-              <td>Rp.256.000.000</td>
-              <td>Pajak On, Mesin Record Dealer, mesin Terawat Halus Seperti Baru, Body Kinclong Tnpa Dempul, Interior Nyaman, Siap Pakai.</td>
-              <td>Terjual</td>
-              <td>
-                <div className="d-flex text-center">
-                  <button className="btn btn-primary" type="button" 
-                    onClick={()=>{detailMobil("Innova Ribbon" ,"Rp.256.000.000")}}
-                  >
-                    <img src="/icons/eye.svg" />
-                  </button>
-                  <button type="button" className="btn btn-secondary ms-2"
-                    onClick={()=>{detail("Innova Ribbon" ,"Rp.256.000.000")}}
-                  >
-                    <img src="/icons/detail_transaksi.svg" />
-                  </button>
-                  <button className="btn btn-success mx-2" type="button"
-                    onClick={()=>{editMobil("Innova Ribbon" ,"Rp.256.000.000")}}
-                  >
-                    <img src="/icons/pena.svg" />
-                  </button>
-                  <button className="btn btn-danger" type="button">
-                    <img src="/icons/trash.svg" />
-                  </button>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>All New Rush 2019</td>
-              <td>Rp.232.000.000</td>
-              <td>Pajak On, Mesin Record Dealer, mesin Terawat Halus Seperti Baru, Body Kinclong Tnpa Dempul, Interior Nyaman, Siap Pakai.</td>
-              <td>Terbooking</td>
-              <td>
-                <div className="d-flex text-center">
-                  <button className="btn btn-primary" type="button" 
-                    onClick={()=>{detailMobil("All New Rush 2019" ,"Rp.232.000.000")}}
-                  >
-                    <img src="/icons/eye.svg" />
-                  </button>
-                  <button type="button" className="btn btn-secondary ms-2"
-                    onClick={()=>{detail("All New Rush 2019" ,"Rp.232.000.000")}}
-                  >
-                    <img src="/icons/detail_transaksi.svg" />
-                  </button>
-                  <button className="btn btn-success mx-2" type="button"
-                    onClick={()=>{editMobil("All New Rush 2019" ,"Rp.232.000.000")}}
-                  >
-                    <img src="/icons/pena.svg" />
-                  </button>
-                  <button className="btn btn-danger" type="button">
-                    <img src="/icons/trash.svg" />
-                  </button>
-                </div>
-              </td>
-            </tr>
+            {
+              mobil.map((mob,index)=>
+                <tr key={index}>
+                  <th scope="row">{index + 1}</th>
+                  <td>{mob.namaMobil}</td>
+                  <td>Rp.121.000.000</td>
+                  <td>Pajak On, Mesin Record Dealer, mesin Terawat Halus Seperti Baru, Body Kinclong Tnpa Dempul, Interior Nyaman, Siap Pakai.</td>
+                  <td>Tersedia</td>
+                  <td>
+                    <div className="d-flex text-center">
+                      <button className="btn btn-primary" type="button" 
+                        onClick={()=>{detailMobil(mob.namaMobil ,"Rp.121.000.000")}}
+                      >
+                        <img src="/icons/eye.svg" />
+                      </button>
+                      <button type="button" className="btn btn-secondary ms-2"
+                        onClick={()=>{detail(mob.namaMobil ,"Rp.121.000.000")}}
+                      >
+                        <img src="/icons/detail_transaksi.svg" />
+                      </button>
+                      <button className="btn btn-success mx-2" type="button"
+                        onClick={()=>{editMobil(mob.namaMobil ,"Rp.121.000.000")}}
+                      >
+                        <img src="/icons/pena.svg" />
+                      </button>
+                      <button className="btn btn-danger" type="button">
+                        <img src="/icons/trash.svg" />
+                      </button>
+                    </div>
+                  </td>
+                </tr> 
+              )
+            } 
           </tbody>
         </table>
         </div>

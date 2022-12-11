@@ -33,10 +33,10 @@ export default function DetailBerita() {
         yang anda inginkan, cukup dengan isikan detailnya dibagian form.
       </p>
       <div className="row">
-        <div className="col-5">  
+        <div className="col col-md-5">  
           <form>
             <div className="mb-3">
-              <label htmlFor="nhtmlFma" className="form-label">Nama Lengkap</label>
+              <label htmlFor="nama" className="form-label">Nama Lengkap</label>
               <input type="text" className="form-control" id="nama"/>
             </div>
             <div className="mb-3">
@@ -70,7 +70,7 @@ export default function DetailBerita() {
         Pembersihan Interior, Pembersihan Kolong Ban, Mesin disemprot obat jamur, dll.
       </p>
       <div className="row">
-        <div className="col-5">  
+        <div className="col col-md-5">  
           <form>
             <div className="mb-3">
               <label htmlFor="nama" className="form-label">Nama Lengkap</label>
@@ -112,7 +112,7 @@ export default function DetailBerita() {
         Pengecekan mobil oleh mekanik berpengalaman.
       </p>
       <div className="row mb-5">
-        <div className="col-5">  
+        <div className="col col-md-5">  
           <form>
             <div className="mb-3">
               <label htmlFor="nama" className="form-label">Nama Lengkap</label>

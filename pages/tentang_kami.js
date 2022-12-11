@@ -27,7 +27,7 @@ export default function Promo() {
 
     <div className="container mb-5">
       <h4 className="text-center my-5">TENTANG KAMI</h4>
-      <div className="row row-cols-2 mt-4 g-4">
+      <div className="row row-cols-1 row-cols-md-2 mt-4 g-4">
         <div className="col mb-3">
           <img src="/images/tentangKami.png" className="img-fluid" alt="gambar" />
         </div>
