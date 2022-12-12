@@ -49,7 +49,7 @@ export default function Home() {
       </Head>
 
       <Navbar />
-      <img src="/images/bg_home.png" className={`img-fluid d-none d-md-block ${style.heroes}`} alt="gambar"/>
+      <img src="/images/bg_home.png" className={`img-fluid w-100 d-none d-md-block ${style.heroes}`} alt="gambar"/>
       <div className="container mb-5">
         <div className={`${style.formJualBeli} row p-3 g-4`}>
           <div className="col-12 col-md-8">
